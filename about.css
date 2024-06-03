@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Handling Navigation Bar's CSS */
+.topnav {
+    background-color: #F0F0F0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.topnav a {
+    float: left;
+    color: #0E1424;
+    text-align: center;
+    padding: 20px 25px 20px 25px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.topnav-right a:hover {
+    text-decoration: underline;
+}
+
+.topnav-right a:active {
+    text-decoration: underline;
+}
+
+.topnav-right {
+  float: right;
+}
+
+
+/* Breaking the page up into Rows and Columns */
+.column {
+    float: left;
+    width: 60%;
+    padding: 20px;
+    align-content: center;
+}
+
+.column1 {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    align-content: center;
+}
+
+.column2 {
+    float: left;
+    width: 40%;
+    padding: 20px;
+    align-content: center;
+}
+
+.column3 {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    align-content: center;
+}
+
+.column4 {
+    float: left;
+    width: 75%;
+    padding: 20px;
+    align-content: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+  width:100%;
+  display: flex;
+  justify-content: center
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F0F0F0;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Presenting HTML Content Appropriately*/
+.column1 img {
+    border-radius: 50%;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Making Text Pretty */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0E1424;
+}
+
+.column2 h4 {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #2A384C;
+}
+
+.column h4 {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.column1 h4 {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+#container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#first {
+    width: 25%;
+    float: left;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+
+#second {
+    width: 75%;
+    float: left;
+    padding: 0px 0px 0px 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+#projectcontainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+}
+
+#projectcolumn {
+    width: 25%;
+    float: left;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
