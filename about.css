@@ -36,7 +36,7 @@
 /* Breaking the page up into Rows and Columns */
 .column {
     float: left;
-    width: 90%;
+    width: 100%;
     padding: 20px;
     align-content: center;
 }
@@ -50,7 +50,7 @@
 
 .column2 {
     float: left;
-    width: 60%;
+    width: 70%;
     padding: 20px;
     align-content: center;
 }
