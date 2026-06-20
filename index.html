@@ -5,41 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jim Solomon</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" href="about.css"> 
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div class="row" >
         <div class="column2">
-            <h1 style="text-align:center;"> Jim Solomon </h1>
+            <h1 style="text-align:left;"> Jim Solomon </h1>
             <p> 
-                I am a PhD Student at UCLA researching artificial intelligence 
+                Hello! I am currently a PhD Student at UCLA researching artificial intelligence 
                 in the <a href="https://visual.ee.ucla.edu/">Visual Machines Group</a> and the <a href="https://rickysavjani.com/#projects">Savjani Lab</a>. 
-                I am jointly advised by Professor Achuta Kadambi and Professor Ricky Savjani.
-            </p>
-            <p>
-                I am honored to be awarded the <a href="https://ucleads.ucop.edu/about/fellowship.html">UC Leads Fellowship</a>.
+                I am jointly advised by Professor Achuta Kadambi and Professor Ricky Savjani. I am also a <a href="https://ucleads.ucop.edu/about/fellowship.html">UC Leads Scholar</a>.
             </p>
             <p>
                 Before joining the Visual Machines Group, I completed my BS in Electrical and Computer Engineering at UCLA. 
-                From 2021 - 2023, I did photonics research at the Mesoscopic Optics and Quantum Electronics Lab.
+                From 2021 - 2023, I did photonics research at the <a href="http://oqe.ee.ucla.edu/index.html">Mesoscopic Optics and Quantum Electronics Lab</a>.
             </p>
 
-            <!-- TODO: Come back and add current research to this site. -->
-
-            <p style="text-align:center;">
-                <a href="https://drive.google.com/file/d/1jePUvIgodRr2P55MlxmyOYM4vezGe5Et/view?usp=sharing" target=”_blank”>Resume</a> |
-                <a href="https://drive.google.com/file/d/1loNqKPpm4zg9DFXrYASipGSRmhQEwUJ7/view?usp=sharing" target=”_blank”>CV</a> |
-                <a href="https://x.com/thejimsolomon" target=”_blank”>Twitter</a> |
-                <a href="https://github.com/jsolomo/" target=”_blank”>Github</a>
-            </p>
         </div>
         <div class="column1">
             <img id="original" src="headshot.jpeg" alt="Portrait Image" style="width: 100%;">
         </div>
     </div>
-    <div class="row" id="publications">
+    <div class="row row-left">
+        <nav class="tabs" aria-label="Project categories">
+            <a class="tab active" href="#" data-tab="publications">Publications</a>
+            <a class="tab" href="#" data-tab="projects">Projects</a>
+            <a class="tab" href="#" data-tab="information">Relevant Information</a>
+        </nav>
+    </div>
+    <div class="row tab-panel" id="tab-publications">
         <div class="column">
-            <h2> Publications </h2>
             <div id="container">
                 <div id="first">
                     <img id="original" src="papers/2FR.png" alt="Splash Image" style="width: 100%;">
@@ -110,9 +106,8 @@
             </div>
         </div>
     </div>
-    <div class="row" id="projects">
+    <div class="row tab-panel" id="tab-projects" style="display:none;">
         <div class="column">
-            <h2> Projects </h2>
             <div id="container">
                 <div id="first">
                     <a href="https://drive.google.com/file/d/1yJEvjXeoVNhSy7dVb-5tJ8kU1MN6QRye/view?usp=sharing" target="_blank">
@@ -132,26 +127,30 @@
                     </p>
                 </div>
             </div>
-            <div id="container">
-                <div id="first">
-                    <a href="https://redwoods-co.web.app/pages/timedtasks.html" target="_blank">
-                        <img id="original" src="projects/TimedTasks.jpeg" alt="Splash Image" style="width: 100%;">
-                    </a>
-                </div>
-                <div id="second">
-                    <p> <b>Timed Tasks: An event based todo list application</b> 
-                        <br>
-                        The app helps users stay prepared by turning upcoming events and deadlines into clear and manageable tasks.
-                        <br>
-                        <i>Tech Used: Swift, SwiftUI, Swift Data</i>
-                        <br>
-                        <a href="https://redwoods-co.web.app/pages/timedtasks.html" target="_blank">
-                            <button> Web Page </button>
-                        </a>
-                    </p>
-                </div>
+        </div>
+    </div>
+    <div class="row tab-panel" id="tab-information" style="display:none;">
+        <div class="column">
+            <div class="info-buttons">
+                <button onclick="window.open('https://drive.google.com/file/d/1jePUvIgodRr2P55MlxmyOYM4vezGe5Et/view?usp=sharing', '_blank');">Resume</button>
+                <button onclick="window.open('https://drive.google.com/file/d/1loNqKPpm4zg9DFXrYASipGSRmhQEwUJ7/view?usp=sharing', '_blank');">Curriculum Vitae</button>
+                <button onclick="window.open('https://x.com/jimsolom', '_blank');">X</button>
+                <button onclick="window.open('https://github.com/jsolomo/', '_blank');">Github</button>
+                <button onclick="window.open('https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=OKHCae4AAAAJ', '_blank');">Google Scholar</button>
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.tab').forEach(function(tab) {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                var name = this.getAttribute('data-tab');
+                document.querySelectorAll('.tab-panel').forEach(function(p) { p.style.display = 'none'; });
+                document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+                document.getElementById('tab-' + name).style.display = '';
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
